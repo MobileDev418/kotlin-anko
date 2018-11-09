@@ -88,7 +88,7 @@ fun Uri.getRealPath(context: Context): String? {
         }// MediaProvider
         // DownloadsProvider
     } else if ("content".equals(scheme, ignoreCase = true)) {
-        return context.getDataColumn(this, null, null)
+        return context.getDataColumn(uri, null, null)
     } else if ("file".equals(scheme, ignoreCase = true)) {
         return path
     }// File
